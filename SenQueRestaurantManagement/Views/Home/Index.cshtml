@@ -1,5 +1,4 @@
-﻿
-<header class="site-header site-header--over-media" data-site-header>
+﻿<header class="site-header site-header--over-media" data-site-header>
 	<link rel="stylesheet" href="~/css/pages/senque.css" />
 	<nav class="site-header__inner" aria-label="Primary">
 		<div class="site-header__bar">
@@ -55,10 +54,6 @@
 					Tài khoản
 				</a>
 
-				<!--
-								The bag is a plain link. The preview below it is a hover
-								convenience only — nothing here is reachable by hovering alone.
-							-->
 				<a class="nav-link--inert nav-link nav-link--emphasis">
 					<svg class="nav-link__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 6.5h11l-1 9.5h-9z" stroke-linejoin="round" /><path d="M7.5 6.5V5a2.5 2.5 0 015 0v1.5" stroke-linecap="round" /></svg>
 					Giỏ hàng
@@ -328,7 +323,6 @@
 				</div>
 			</form>
 
-			<!-- Shown while the field is empty. -->
 			<div class="search-suggestions">
 				<div>
 					<p class="label">Common searches</p>
@@ -358,381 +352,227 @@
 </div>
 
 <main class="page__main" id="main">
-	<h1 class="visually-hidden">A1 Pharmacy — A pharmacy with time to explain</h1>
+	<h1 class="visually-hidden">Nhà hàng Sen Quê — Tinh hoa ẩm thực Việt</h1>
 
-	<section class="hero"
-			 data-surface="dark"
-			 data-hero-carousel
-			 data-interval="7000"
-			 aria-roledescription="carousel"
-			 aria-label="Featured products">
-		<!--
-						Backdrop, in four layers so the field is never a flat block of
-						green: a dispensary photograph for texture, a bloom of the current
-						packshot, a gradient that protects the type, and ruled column
-						guides on top.
-					-->
-		<div class="hero__backdrop" aria-hidden="true"
-			 style="position:absolute; inset:0; opacity:1; filter:none; z-index:0;">
-			<div style="position:absolute; inset:0;">
-				<img src="~/images/products/sen-que-cover.png" alt=""
-					 style="width:100%; height:100%; object-fit:cover; opacity:1; filter:none;" />
-			</div>
-			<!-- lớp tối nhẹ bên trái cho chữ dễ đọc -->
-			<div style="position:absolute; inset:0;
-			background:linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 45%, rgba(0,0,0,0) 75%);"></div>
+	<!-- ════════════════════════════════════════════ BANNER ══ -->
+	<section class="hero senque-hero" data-surface="dark" aria-label="Nhà hàng Sen Quê">
+
+		<!-- Ảnh bìa toàn khung -->
+		<div class="senque-hero__bg" aria-hidden="true">
+			<img src="~/images/products/sen-que-cover.png" alt="" fetchpriority="high" />
+			<div class="senque-hero__shade"></div>
 		</div>
 
-		<!-- Oversized catalogue number, bled off the left edge -->
-		<span class="hero__catalogue-number" data-hero-catalogue-number aria-hidden="true">
-			001
-		</span>
 		<div class="shell hero__inner">
 			<div class="hero__slides">
-				<div class="hero-slide"
-					 data-hero-slide
-					 data-slide-index="0"
-					 data-active
-					 role="group"
-					 aria-roledescription="slide"
-					 aria-label="1 of 4: Paracetamol 500mg Tablets">
+				<div class="hero-slide" data-hero-slide data-slide-index="0" data-active>
 					<div class="hero-slide__grid">
-						<!-- ───────────────────────────────────────── detail ── -->
 						<div class="hero-slide__detail">
 							<p class="label label--accent hero-slide__eyebrow">
-								Featured · Pain &amp; Fever
+								NHÀ HÀNG · SEN QUÊ &amp; LÀNG VIỆT
 							</p>
 
-							<h2 class="text-d2 hero-slide__title">Nhà hàng Sen Quê - Nhà hàng Việt Nam truyền thống</h2>
+							<h2 class="text-d2 hero-slide__title hero-title-senque">
+								<span class="hero-title-senque__line">Tinh hoa</span>
+								<span class="hero-title-senque__line">ẩm thực Việt</span>
+								<span class="hero-title-senque__brand">Sen Quê</span>
+							</h2>
 
-							<dl class="hero-spec">
+							<dl class="hero-spec senque-hero-spec">
 								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Active</dt>
-									<dd class="hero-spec__value">Paracetamol 500mg</dd>
+									<dt class="hero-spec__term">ẨM THỰC</dt>
+									<dd class="hero-spec__value">Món Việt truyền thống</dd>
 								</div>
 								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Pack</dt>
-									<dd class="hero-spec__value">32 tablets</dd>
+									<dt class="hero-spec__term">ĐẶC TRƯNG</dt>
+									<dd class="hero-spec__value">Hương vị quê nhà</dd>
 								</div>
 								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Class</dt>
-									<dd class="hero-spec__value">OTC</dd>
+									<dt class="hero-spec__term">KHÔNG GIAN</dt>
+									<dd class="hero-spec__value">Ấm cúng, gần gũi</dd>
 								</div>
 								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Max / order</dt>
-									<dd class="hero-spec__value">2</dd>
+									<dt class="hero-spec__term">HỆ THỐNG</dt>
+									<dd class="hero-spec__value">Chuỗi nhà hàng</dd>
 								</div>
 							</dl>
 
-							<p class="hero-slide__summary">The analgesic to reach for first.</p>
+							<p class="hero-slide__summary senque-hero-summary">
+								Tinh hoa ẩm thực Việt Nam, gìn giữ hương vị truyền thống
+								và kết nối yêu thương qua từng bữa ăn.
+							</p>
 
-							<div class="hero-slide__actions">
-								<div class="hero-slide__price">
-									<span class="label label--light">Price</span>
-									<p class="hero-slide__price-row">
-										<span class="hero-slide__price-value">$25.00</span>
-												
-									</p>
+							<div class="hero-slide__actions senque-hero-actions">
+								<div class="hero-slide__price senque-hero-brand">
+									<span class="label label--light">THƯƠNG HIỆU</span>
+									<p class="senque-hero-slogan">Đậm đà văn hóa Việt, hương vị quê nhà</p>
 								</div>
 
 								<div class="button-row">
-									<button type="button"
-											data-add-to-bag
-											class="button button--accent button--md">
-										<span class="button__label">Add to bag</span>
-									</button>
-
-									<a href="product.html" class="button button--outline-light button--md">
-										Full details
+									<a href="/Menu/Index" class="button button--accent button--md">
+										<span class="button__label">Khám phá thực đơn</span>
+									</a>
+									<a href="#chi-nhanh" class="button button--outline-light button--md">
+										Tìm chi nhánh
 									</a>
 								</div>
 							</div>
 						</div>
-
-						<!-- ─────────────────────────────────────── packshot ── -->
-						
-					</div>
-				</div>
-				<div class="hero-slide"
-					 data-hero-slide
-					 data-slide-index="1"
-					 role="group"
-					 aria-roledescription="slide"
-					 aria-label="2 of 4: Omeprazole 20mg Capsules"
-					 aria-hidden="true">
-					<div class="hero-slide__grid">
-						<!-- ───────────────────────────────────────── detail ── -->
-						<div class="hero-slide__detail">
-							<p class="label label--accent hero-slide__eyebrow">
-								Featured · Digestive Health
-							</p>
-
-							<h2 class="text-d2 hero-slide__title">Omeprazole 20mg Capsules</h2>
-
-							<dl class="hero-spec">
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Active</dt>
-									<dd class="hero-spec__value">Omeprazole 20mg</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Pack</dt>
-									<dd class="hero-spec__value">14 capsules</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Class</dt>
-									<dd class="hero-spec__value">Pharmacy-only</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Max / order</dt>
-									<dd class="hero-spec__value">1</dd>
-								</div>
-							</dl>
-
-							<p class="hero-slide__summary">A proton pump inhibitor for reflux occurring twice a week or more.</p>
-
-							<div class="hero-slide__actions">
-								<div class="hero-slide__price">
-									<span class="label label--light">Price</span>
-									<p class="hero-slide__price-row">
-										<span class="hero-slide__price-value">$110.00</span>
-												
-									</p>
-								</div>
-
-								<div class="button-row">
-									<button type="button"
-											data-add-to-bag
-											class="button button--accent button--md">
-										<span class="button__label">Add to bag</span>
-									</button>
-
-									<a href="product.html" class="button button--outline-light button--md">
-										Full details
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- ─────────────────────────────────────── packshot ── -->
-						
-					</div>
-				</div>
-				<div class="hero-slide"
-					 data-hero-slide
-					 data-slide-index="2"
-					 role="group"
-					 aria-roledescription="slide"
-					 aria-label="3 of 4: Oral Rehydration Salts"
-					 aria-hidden="true">
-					<div class="hero-slide__grid">
-						<!-- ───────────────────────────────────────── detail ── -->
-						<div class="hero-slide__detail">
-							<p class="label label--accent hero-slide__eyebrow">
-								Featured · Digestive Health
-							</p>
-
-							<h2 class="text-d2 hero-slide__title">Oral Rehydration Salts</h2>
-
-							<dl class="hero-spec">
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Active</dt>
-									<dd class="hero-spec__value">Glucose / sodium chloride / potassium chloride</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Pack</dt>
-									<dd class="hero-spec__value">12 sachets</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Class</dt>
-									<dd class="hero-spec__value">OTC</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Max / order</dt>
-									<dd class="hero-spec__value">4</dd>
-								</div>
-							</dl>
-
-							<p class="hero-slide__summary">The single most useful thing in the cupboard during a stomach bug.</p>
-
-							<div class="hero-slide__actions">
-								<div class="hero-slide__price">
-									<span class="label label--light">Price</span>
-									<p class="hero-slide__price-row">
-										<span class="hero-slide__price-value">$60.00</span>
-												
-									</p>
-								</div>
-
-								<div class="button-row">
-									<button type="button"
-											data-add-to-bag
-											class="button button--accent button--md">
-										<span class="button__label">Add to bag</span>
-									</button>
-
-									<a href="product.html" class="button button--outline-light button--md">
-										Full details
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- ─────────────────────────────────────── packshot ── -->
-						
-					</div>
-				</div>
-				<div class="hero-slide"
-					 data-hero-slide
-					 data-slide-index="3"
-					 role="group"
-					 aria-roledescription="slide"
-					 aria-label="4 of 4: Complete Multivitamin"
-					 aria-hidden="true">
-					<div class="hero-slide__grid">
-						<!-- ───────────────────────────────────────── detail ── -->
-						<div class="hero-slide__detail">
-							<p class="label label--accent hero-slide__eyebrow">
-								Featured · Vitamins &amp; Supplements
-							</p>
-
-							<h2 class="text-d2 hero-slide__title">Complete Multivitamin</h2>
-
-							<dl class="hero-spec">
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Active</dt>
-									<dd class="hero-spec__value">Multivitamin and mineral</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Pack</dt>
-									<dd class="hero-spec__value">60 tablets</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Class</dt>
-									<dd class="hero-spec__value">OTC</dd>
-								</div>
-								<div class="hero-spec__cell">
-									<dt class="hero-spec__term">Max / order</dt>
-									<dd class="hero-spec__value">4</dd>
-								</div>
-							</dl>
-
-							<p class="hero-slide__summary">A sensible daily base at doses near nutrient reference values.</p>
-
-							<div class="hero-slide__actions">
-								<div class="hero-slide__price">
-									<span class="label label--light">Price</span>
-									<p class="hero-slide__price-row">
-										<span class="hero-slide__price-value">$90.00</span>
-												
-									</p>
-								</div>
-
-								<div class="button-row">
-									<button type="button"
-											data-add-to-bag
-											class="button button--accent button--md">
-										<span class="button__label">Add to bag</span>
-									</button>
-
-									<a href="product.html" class="button button--outline-light button--md">
-										Full details
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- ─────────────────────────────────────── packshot ── -->
-						
-					</div>
-				</div>
-			</div>
-
-			<!-- ─────────────────────────────────────── thumbnail rail ── -->
-			<div class="hero-rail">
-				<div class="hero-rail__row">
-					<span class="label label--accent hero-rail__counter" data-numeric>
-						<span data-hero-position>01</span> / 04
-					</span>
-
-					<ul class="hero-rail__list">
-						<li class="hero-rail__item">
-							<button type="button"
-									class="hero-rail__button"
-									data-hero-thumbnail
-									data-slide-index="0"
-									aria-label="Show Paracetamol 500mg Tablets"
-									aria-current="true">
-								<span class="hero-rail__track">
-									<span class="hero-rail__progress"></span>
-								</span>
-								<span class="hero-rail__name">Paracetamol 500mg Tablets</span>
-							</button>
-						</li>
-						<li class="hero-rail__item">
-							<button type="button"
-									class="hero-rail__button"
-									data-hero-thumbnail
-									data-slide-index="1"
-									aria-label="Show Omeprazole 20mg Capsules">
-								<span class="hero-rail__track">
-									<span class="hero-rail__progress"></span>
-								</span>
-								<span class="hero-rail__name">Omeprazole 20mg Capsules</span>
-							</button>
-						</li>
-						<li class="hero-rail__item">
-							<button type="button"
-									class="hero-rail__button"
-									data-hero-thumbnail
-									data-slide-index="2"
-									aria-label="Show Oral Rehydration Salts">
-								<span class="hero-rail__track">
-									<span class="hero-rail__progress"></span>
-								</span>
-								<span class="hero-rail__name">Oral Rehydration Salts</span>
-							</button>
-						</li>
-						<li class="hero-rail__item">
-							<button type="button"
-									class="hero-rail__button"
-									data-hero-thumbnail
-									data-slide-index="3"
-									aria-label="Show Complete Multivitamin">
-								<span class="hero-rail__track">
-									<span class="hero-rail__progress"></span>
-								</span>
-								<span class="hero-rail__name">Complete Multivitamin</span>
-							</button>
-						</li>
-					</ul>
-
-					<div class="hero-rail__controls">
-						<button type="button" class="hero-rail__control" data-hero-pause aria-pressed="false" aria-label="Pause automatic rotation">
-							<svg class="hero-rail__icon" data-hero-icon-pause viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-								<rect x="4.5" y="3.5" width="2.5" height="9" />
-								<rect x="9" y="3.5" width="2.5" height="9" />
-							</svg>
-							<svg class="hero-rail__icon" data-hero-icon-play viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" hidden>
-								<path d="M5 3.5l8 4.5-8 4.5z" />
-							</svg>
-						</button>
-						<button type="button" class="hero-rail__control" data-hero-previous aria-label="Previous product">
-							<svg class="hero-rail__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-								<path d="M10 3L5 8l5 5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</button>
-						<button type="button" class="hero-rail__control" data-hero-next aria-label="Next product">
-							<svg class="hero-rail__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-								<path d="M6 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<p class="visually-hidden" data-hero-announcement aria-live="polite"></p>
 	</section>
+
+	<!-- ═══════════════════════════════════ HỆ THỐNG CHI NHÁNH ══ -->
+	
+
+	<link rel="stylesheet" href="~/css/pages/senque-branches.css" asp-append-version="true" />
+
+	<section class="senque-branches" id="chi-nhanh" aria-labelledby="senque-branches-title" data-branch-carousel>
+		@* Muốn có ảnh nền riêng cho phần chi nhánh: bỏ comment khối dưới và đổi tên ảnh *@
+		@*
+	<div class="senque-branches__bg" aria-hidden="true">
+		<img src="~/images/products/senque-branches-bg.png" alt="" loading="lazy" />
+	</div>
+	*@
+
+		<div class="senque-branches__container">
+
+			<!-- Cột trái: giới thiệu -->
+			<div class="senque-branches__intro">
+				<p class="senque-branches__eyebrow">Hệ thống chi nhánh</p>
+
+				<h2 class="senque-branches__title" id="senque-branches-title">
+					<span class="senque-branches__brand">
+						Sen Quê
+						<svg class="senque-branches__lotus" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true">
+							<path d="M32 4c-6 7-6 19 0 28 6-9 6-21 0-28z" />
+							<path d="M32 32c-4-9-11-15-20-17 1 9 9 16 20 17z" />
+							<path d="M32 32c4-9 11-15 20-17-1 9-9 16-20 17z" />
+							<path d="M32 33c-9-2-18-1-26 4 9 3 18 2 26-4z" />
+							<path d="M32 33c9-2 18-1 26 4-9 3-18 2-26-4z" />
+						</svg>
+					</span>
+					<span class="senque-branches__tagline">trên khắp mọi miền</span>
+				</h2>
+
+				<p class="senque-branches__description">
+					Với 4 chi nhánh, Sen Quê mang hương vị ẩm thực Việt đến gần hơn với bạn,
+					dù ở bất cứ đâu.
+				</p>
+
+				<div class="senque-branches__controls">
+					<span class="senque-branches__counter"><span data-branch-position>01</span> / 04</span>
+					<span class="senque-branches__progress" aria-hidden="true"><span data-branch-progress></span></span>
+
+					<div class="senque-branches__buttons">
+						<button type="button" class="senque-branches__button" data-branch-pause aria-pressed="false" aria-label="Tạm dừng">
+							<svg data-icon-pause viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4.5" y="3.5" width="2.2" height="9" /><rect x="9.3" y="3.5" width="2.2" height="9" /></svg>
+							<svg data-icon-play viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" hidden><path d="M5 3.5l8 4.5-8 4.5z" /></svg>
+						</button>
+						<button type="button" class="senque-branches__button" data-branch-prev aria-label="Chi nhánh trước">
+							<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+						</button>
+						<button type="button" class="senque-branches__button" data-branch-next aria-label="Chi nhánh tiếp theo">
+							<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cột phải: 4 thẻ chi nhánh -->
+			<ul class="senque-branches__track" data-branch-track>
+
+				<li class="senque-branch is-active" data-branch-card>
+					<span class="senque-branch__corner senque-branch__corner--tl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--tr" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--bl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--br" aria-hidden="true"></span>
+					<a class="senque-branch__card" href="/Home/Branches" aria-label="Sen Quê Kim Liên — Xóm Mậu 4, xã Kim Liên, Nam Đàn, Nghệ An">
+						<div class="senque-branch__image">
+							<img src="~/images/products/senquenamdan.png" alt="Nhà hàng Sen Quê Kim Liên" loading="lazy" />
+						</div>
+						<div class="senque-branch__body">
+							<p class="senque-branch__address">
+								<svg class="senque-branch__pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" /><circle cx="12" cy="10" r="2.6" fill="#0a3a2a" /></svg>
+								<span>Xóm Mậu 4, xã Kim Liên</span>
+							</p>
+							<p class="senque-branch__city">Nam Đàn, Nghệ An</p>
+							<span class="senque-branch__ornament" aria-hidden="true"></span>
+						</div>
+					</a>
+				</li>
+
+				<li class="senque-branch" data-branch-card>
+					<span class="senque-branch__corner senque-branch__corner--tl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--tr" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--bl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--br" aria-hidden="true"></span>
+					<a class="senque-branch__card" href="/Home/Branches" aria-label="Sen Quê Nguyễn Đức Cảnh — Số 11 Nguyễn Đức Cảnh, TP Vinh">
+						<div class="senque-branch__image">
+							<img src="~/images/products/senquedatuong.png" alt="Nhà hàng Sen Quê Nguyễn Đức Cảnh" loading="lazy" />
+						</div>
+						<div class="senque-branch__body">
+							<p class="senque-branch__address">
+								<svg class="senque-branch__pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" /><circle cx="12" cy="10" r="2.6" fill="#0a3a2a" /></svg>
+								<span>Số 11 - Nguyễn Đức Cảnh</span>
+							</p>
+							<p class="senque-branch__city">TP Vinh, Nghệ An</p>
+							<span class="senque-branch__ornament" aria-hidden="true"></span>
+						</div>
+					</a>
+				</li>
+
+				<li class="senque-branch" data-branch-card>
+					<span class="senque-branch__corner senque-branch__corner--tl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--tr" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--bl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--br" aria-hidden="true"></span>
+					<a class="senque-branch__card" href="/Home/Branches" aria-label="Sen Quê Nguyễn Phong Sắc — Số 1 Nguyễn Phong Sắc, TP Vinh">
+						<div class="senque-branch__image">
+							<img src="~/images/products/senque2vinh.png" alt="Nhà hàng Sen Quê Nguyễn Phong Sắc" loading="lazy" />
+						</div>
+						<div class="senque-branch__body">
+							<p class="senque-branch__address">
+								<svg class="senque-branch__pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" /><circle cx="12" cy="10" r="2.6" fill="#0a3a2a" /></svg>
+								<span>Số 1 - Nguyễn Phong Sắc</span>
+							</p>
+							<p class="senque-branch__city">TP Vinh, Nghệ An</p>
+							<span class="senque-branch__ornament" aria-hidden="true"></span>
+						</div>
+					</a>
+				</li>
+
+				<li class="senque-branch" data-branch-card>
+					<span class="senque-branch__corner senque-branch__corner--tl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--tr" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--bl" aria-hidden="true"></span>
+					<span class="senque-branch__corner senque-branch__corner--br" aria-hidden="true"></span>
+					<a class="senque-branch__card" href="/Home/Branches" aria-label="Sen Quê Nha Trang — 108 Dã Tượng, Nha Trang, Khánh Hòa">
+						<div class="senque-branch__image">
+							<img src="~/images/products/senquenhatrang.png" alt="Nhà hàng Sen Quê Nha Trang" loading="lazy" />
+						</div>
+						<div class="senque-branch__body">
+							<p class="senque-branch__address">
+								<svg class="senque-branch__pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" /><circle cx="12" cy="10" r="2.6" fill="#0a3a2a" /></svg>
+								<span>108 Đ. Dã Tượng</span>
+							</p>
+							<p class="senque-branch__city">Nha Trang, Khánh Hòa</p>
+							<span class="senque-branch__ornament" aria-hidden="true"></span>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+	</section>
+
+
+
+	<!-- Nếu còn các section khác bên dưới (thực đơn, ưu đãi...), dán vào đây, trước thẻ </main> -->
+</main>
+
 
 
 
